@@ -3,14 +3,14 @@ import React, { useState } from 'react';
 import VehicleList from './pages/VehicleList'; 
 import VehicleForm from './pages/VehicleForm'; 
 import MaintenanceForm from './pages/MaintenanceForm'; 
-// No necesitas App.css, pero lo dejamos si existe para evitar errores
+// No necesita App.css, pero lo dejamos si existe para evitar errores
 
 function App() {
     // Clave para forzar la actualización de la lista de vehículos después del registro
     const [listKey, setListKey] = useState(0);
 
     const handleVehicleRegistered = () => {
-        // Incrementa la clave para forzar a VehicleList a recargar los datos (Solución 'newbie' para recargar)
+        // Incrementa la clave para forzar a VehicleList a recargar los datos 
         setListKey(prevKey => prevKey + 1);
     };
 
