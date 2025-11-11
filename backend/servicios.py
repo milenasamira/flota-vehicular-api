@@ -8,7 +8,7 @@ from fastapi import HTTPException, status
 from backend.models import Vehiculo, VehiculoBase, Mantenimiento, MantenimientoBase
 
 # --- RepositorioVehiculos (Capa de Acceso a Datos - CRUD) ---
-# ESTA es la clase que tu API no puede encontrar
+
 class RepositorioVehiculos:
     
     def __init__(self, db: Session):
