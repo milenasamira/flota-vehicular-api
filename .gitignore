@@ -1,0 +1,15 @@
+# Entornos Python
+venv/
+__pycache__/
+*.pyc
+
+# Entornos Node (React)
+/frontend/node_modules/
+/frontend/dist/
+
+# Datos de la base de datos (PostgreSQL/Docker)
+pgdata/
+
+# Archivos específicos de entorno de desarrollo
+.vscode/
+.DS_Store
