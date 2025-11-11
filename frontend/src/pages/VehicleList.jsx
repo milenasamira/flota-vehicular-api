@@ -8,7 +8,7 @@ function VehicleList() {
     const [vehicles, setVehicles] = useState([]);
     const [loading, setLoading] = useState(true);
 
-    // Función de obtención de datos (llamada repetidamente, ¡cuidado con la eficiencia!)
+    // Función de obtención de datos 
     const fetchVehicles = async () => {
         try {
             // URL quemada directamente en el código
@@ -32,7 +32,7 @@ function VehicleList() {
             // Retroalimentación simple de alerta
             alert(`Estado del vehículo ID ${vehiculoId} cambiado a ${nuevoEstado}. ¡Listo!`);
             
-            // Recargar la lista (Llamar de nuevo a fetchVehicles es la forma más simple)
+            // Recargar la lista (Llamar de nuevo a fetchVehicles , simple)
             fetchVehicles(); 
 
         } catch (error) {
