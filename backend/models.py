@@ -23,11 +23,28 @@ class ReporteBase(SQLModel):
     fecha: datetime = Field(default_factory=datetime.utcnow)
     detalle: Optional[str] = None
 
-class MantenimientoBase(SQLModel):
-    fecha: datetime = Field(default_factory=datetime.utcnow) 
-    tipo: str 
-    notas: Optional[str] = None
+# backend/models.py
 
+# ... (tus imports arriba siguen igual)
+
+# Modificamos esta clase para tener los 8 puntos de chequeo (Req 8)
+class MantenimientoBase(SQLModel):
+    fecha: datetime = Field(default_factory=datetime.utcnow)
+    tipo: str = Field(default="VTV Anual")
+    
+    # Los 8 Puntos de Chequeo (Req 6: Puntuación de 1 a 10)
+    luces: int = Field(default=10, ge=1, le=10)
+    frenos: int = Field(default=10, ge=1, le=10)
+    neumaticos: int = Field(default=10, ge=1, le=10)
+    suspension: int = Field(default=10, ge=1, le=10)
+    chasis: int = Field(default=10, ge=1, le=10)
+    gases: int = Field(default=10, ge=1, le=10)
+    direccion: int = Field(default=10, ge=1, le=10)
+    seguridad: int = Field(default=10, ge=1, le=10)
+    
+    resultado_final: Optional[str] = None # Para guardar si fue APTO o RECHEQUEAR
+    notas: Optional[str] = None # Para las observaciones del inspector
+    
 # --- CLASES TABLA (Para la Base de Datos) ---
 
 class Usuario(UsuarioBase, table=True):

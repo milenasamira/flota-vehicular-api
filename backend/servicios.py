@@ -8,7 +8,7 @@ from fastapi import HTTPException, status
 from backend.models import Vehiculo, VehiculoBase, Mantenimiento, MantenimientoBase
 
 # --- RepositorioVehiculos (Capa de Acceso a Datos - CRUD) ---
-# ESTA es la clase que tu API no puede encontrar
+
 class RepositorioVehiculos:
     
     def __init__(self, db: Session):
@@ -34,7 +34,9 @@ class RepositorioVehiculos:
     def actualizar_estado(self, vehiculo_id: int, nuevo_estado: str) -> Vehiculo:
         vehiculo = self.buscar_por_id(vehiculo_id)
         
+        # Lista original de estados (Solo estos 3)
         estados_validos = ["disponible", "en uso", "mantenimiento"]
+        
         if nuevo_estado not in estados_validos:
             raise HTTPException(
                 status_code=status.HTTP_400_BAD_REQUEST, 
@@ -48,7 +50,7 @@ class RepositorioVehiculos:
         return vehiculo
 
 # --- ServicioMantenimiento (Lógica de Negocio específica) ---
-# ESTA es la otra clase que faltaba
+
 class ServicioMantenimiento:
 
     def __init__(self, db: Session):

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import VehicleList from './pages/VehicleList'; 
 import VehicleForm from './pages/VehicleForm'; 
 import MaintenanceForm from './pages/MaintenanceForm'; 
-// No necesitas App.css, pero lo dejamos si existe para evitar errores
+// No necesita App.css, pero lo dejamos si existe para evitar errores
 
 function App() {
     // Clave para forzar la actualización de la lista de vehículos después del registro

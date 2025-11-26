@@ -8,7 +8,7 @@ function VehicleList() {
     const [vehicles, setVehicles] = useState([]);
     const [loading, setLoading] = useState(true);
 
-    // Función de obtención de datos (llamada repetidamente, ¡cuidado con la eficiencia!)
+    // Función de obtención de datos 
     const fetchVehicles = async () => {
         try {
             // URL quemada directamente en el código
@@ -23,7 +23,7 @@ function VehicleList() {
         }
     };
 
-    // [Función de Actualización de Estado (Lógica mezclada)]
+    // [Función de Actualización de Estado ]
     const handleUpdateState = async (vehiculoId, nuevoEstado) => {
         try {
             // Se usa el endpoint PATCH /api/vehiculos/{id}/estado (Requisito 3)

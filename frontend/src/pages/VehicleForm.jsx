@@ -53,7 +53,7 @@ const VehicleForm = ({ onVehicleRegistered }) => {
         }
     };
 
-    // <--- INICIO DEL BLOQUE RETURN CORREGIDO --->
+    // <--- INICIO DEL BLOQUE RETURN --->
     return (
         <div style={{ padding: '20px', border: '2px solid black', maxWidth: '450px', margin: '10px', backgroundColor: '#fffbe0', color: 'black' }}>
             
@@ -89,6 +89,6 @@ const VehicleForm = ({ onVehicleRegistered }) => {
             </form>
         </div>
     );
-}; // <--- La llave de cierre del componente
+}; 
 
 export default VehicleForm;
