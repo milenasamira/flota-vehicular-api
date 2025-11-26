@@ -3,7 +3,7 @@
 
 Aplicación web para gestionar turnos e inspecciones vehiculares. El sistema permite agendar vehículos, loguearse como inspector y cargar los resultados de la VTV (con validación automática de puntajes).
 
-## 🛠 Tecnologías
+##  Tecnologías
 
   * **Backend:** Python (FastAPI) + SQLModel.
   * **Base de Datos:** PostgreSQL (corriendo en Docker).
